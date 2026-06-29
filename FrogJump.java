@@ -33,22 +33,22 @@ public class FrogJump {
       System.out.println(dpApproach(n-1, heights, dp));
     }
 
-    private static void minimumJumps(int n, int[] heights, int i, int sum,int[] dp) {
-      if(i==n-1){
-        dp[i]=Math.min(dp[i], sum);
-        return;
-      }
-      if(i+1<n){
-        int temp=Math.abs(heights[i]-heights[i+1]);
-        minimumJumps(n, heights, i+1, sum+temp, dp);
+    // private static void minimumJumpss(int n, int[] heights, int i, int sum,int[] dp) {
+    //   if(i==n-1){
+    //     dp[i]=Math.min(dp[i], sum);
+    //     return;
+    //   }
+    //   if(i+1<n){
+    //     int temp=Math.abs(heights[i]-heights[i+1]);
+    //     minimumJumpss(n, heights, i+1, sum+temp, dp);
        
-      }
-      if(i+2<n){
-        int temp=Math.abs(heights[i]-heights[i+2]);
-        minimumJumps(n, heights, i+2, sum+temp, dp);
+    //   }
+    //   if(i+2<n){
+    //     int temp=Math.abs(heights[i]-heights[i+2]);
+    //     minimumJumpss(n, heights, i+2, sum+temp, dp);
         
-      }
-    }
+    //   }
+    // }
     public static int dpApproach(int idx,int[] heights,int[] dp){
       if(idx==0){
         return 0;
